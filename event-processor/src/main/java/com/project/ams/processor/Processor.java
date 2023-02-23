@@ -1,5 +1,6 @@
 package com.project.ams.processor;
 
+import com.project.arm.producer.EventProducer;
 import okhttp3.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,6 +10,12 @@ import java.io.IOException;
 public class Processor {
     private static final Logger LOGGER = LoggerFactory.getLogger(Processor.class);
     private PropertyLoader propertyLoader = new PropertyLoader();
+    private EventProducer producer;
+
+    public Processor() {
+        producer = new EventProducer();
+        producer.initializeProducer();
+    }
 
     public void start() {
         OkHttpClient client = new OkHttpClient.Builder()
@@ -27,7 +34,7 @@ public class Processor {
             LOGGER.info("response receive with status code {}", statusCode);
             ResponseBody body = response.body();
             assert body != null;
-            LOGGER.info(JsonParser.parseCoin(body.string()).toString());
+            producer.addRecord("bitcoin_new", body.string());
         } catch (IOException e) {
             e.printStackTrace();
         }
