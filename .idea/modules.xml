@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/alert_management_system.iml" filepath="$PROJECT_DIR$/.idea/alert_management_system.iml" />
+      <module fileurl="file://$PROJECT_DIR$/alerting-system/alerting-system.iml" filepath="$PROJECT_DIR$/alerting-system/alerting-system.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dashboard-ui/dashboard-ui.iml" filepath="$PROJECT_DIR$/dashboard-ui/dashboard-ui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/data-processor/data-processor.iml" filepath="$PROJECT_DIR$/data-processor/data-processor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/event-processor/event-processor.iml" filepath="$PROJECT_DIR$/event-processor/event-processor.iml" />
+    </modules>
+  </component>
+</project>
